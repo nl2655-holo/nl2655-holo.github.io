@@ -17,7 +17,8 @@ nl2655@cumc.columbia.edu
 ![](material/DSC00770.jpg)
 
 
-# add links
+# some links
+You can learn more about my experience [here](about.html).
 
 [In case somebody like some music](https://live.bilibili.com/157901)
 
