@@ -18,7 +18,7 @@ E-mail: nl2655@cumc.columbia.edu
 
 # some links
 
-If anyone want to see my resume or experience ==> [here](about.html).
+If anyone wants to see my resume or experience ==> [here](about.html).
 
 [In case somebody like some music](https://live.bilibili.com/157901)
 

@@ -13,4 +13,4 @@ navbar:
       href: http://github.com/nl2655-holo/
 output:
   html_document:
-    theme: cerulean
+    theme: flatly
