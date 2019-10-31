@@ -4,21 +4,21 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 Master of Public Health Candidate | Biostatistic
 
 Columbia Mailman School of Public Health
 
-nl2655@cumc.columbia.edu
+E-mail: nl2655@cumc.columbia.edu
 
 
 ![](material/DSC00770.jpg)
 
 
 # some links
-You can learn more about my experience [here](about.html).
+
+If anyone want to see my resume or experience ==> [here](about.html).
 
 [In case somebody like some music](https://live.bilibili.com/157901)
 
