@@ -14,3 +14,54 @@ library(p8105.datasets)
 library(plotly)
 ```
 
+```{r}
+set.seed(1551)
+
+data(rest_inspec)
+ri_md = 
+  rest_inspec %>% 
+  select(boro, critical_flag, cuisine_description, dba, score) %>% 
+  filter(!is.na(dba),!is.na(score)) %>% 
+  sample_n(5000)
+ri_md %>% 
+  count(cuisine_description)
+```
+
+## Barchart on overall Critical flag acrossing the area in NYC
+
+```{r}
+Cri_fla =
+  ri_md %>%
+  drop_na() %>% 
+  filter(critical_flag != "Not Applicable") %>% 
+  mutate(area = boro) %>% 
+  group_by(area, critical_flag) %>% 
+  summarize(n = n()) %>% 
+ plot_ly(x = ~area, y = ~n, color = ~critical_flag, type = "bar")
+Cri_fla
+```
+We can see that Mahattan have both highest critical and highest, not critical crimes, whereas Staten island have both lowest critical and lowest not critical crimes.
+
+
+## Boxplot on restarant score across the area
+
+```{r}
+sco_bor =
+  ri_md %>%
+  drop_na() %>% 
+ ggplot(aes(x = boro, y = score, fill = boro)) +
+  geom_boxplot() +
+  labs(
+    title = "restarant score across area",
+    x = "Area",
+    y = "Violation score"
+  )+
+  theme_classic() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+ggplotly(sco_bor)
+```
+
+We can see that Brooklyn has highest median = 16, Bronx has highest number of maximum = 100, Staten island has highest upper fance = 48.There are lots of outliers(extreme site), in all area except Staten island.
+
+## Scatterplot on score across Cuisine type
