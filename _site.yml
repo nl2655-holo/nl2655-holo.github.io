@@ -16,7 +16,7 @@ navbar:
       - text: "Resume"
         href: Resume.html
       - text: "Resume Download"
-        href: https://drive.google.com/open?id=1juFLDX6LDm84P8R5R7K5A5c4ZXLcvXdv
+        href: https://drive.google.com/open?id=1Fn8aRhcy8dRnf5bVUXbGgjns4MFBmxEX
   right:
     - icon: fa-envelope fa-lg
       href: mailto:<nl2655@cumc.columbia.edu>
