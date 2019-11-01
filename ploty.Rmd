@@ -88,3 +88,6 @@ ggplotly(sca_cui)
 ```
 
 from plot we can see that In **Bronx**, the Ice cuisines has highest violate score; In **Brooklyn**, the Salads cuisines have highest violate score;In **Manhattan**, Ice cuisines has highest violate score; In **Queens**, the Juice cuisines has highest violate score; In **Staten island**, the Donuts cuisines has highest violate score;
+
+
+[Summary Dashbroad](Dashbroad.html)

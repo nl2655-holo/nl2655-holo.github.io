@@ -10,7 +10,7 @@ navbar:
       - text: "Ploty"
         href: ploty.html
       - text: "Dashboard"
-        href: Dashboard.html
+        href: Dashbroad.html
     - text: "Resume"
       menu:
       - text: "Resume"

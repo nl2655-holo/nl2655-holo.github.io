@@ -85,5 +85,5 @@ ri_md %>%
 ggplotly(sca_cui)
 ```
 
-rmarkdown::render("Dashbroad.Rmd", output_format = "flexdashboard::flex_dashboard")
+
 
