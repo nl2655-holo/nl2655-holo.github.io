@@ -7,6 +7,8 @@ navbar:
       href: about.html
     - text: "Resume"
       href: material/cv.mht
+    - text: "Ploty"
+      href: ploty.html
   right:
     - text: "Resume Download"
       href: https://drive.google.com/open?id=1juFLDX6LDm84P8R5R7K5A5c4ZXLcvXdv
