@@ -6,7 +6,11 @@ navbar:
     - text: "About Me"
       href: about.html
     - text: "Ploty"
-      href: ploty.html
+      menu:
+      - text: "Ploty"
+        href: ploty.html
+      - text: "Dashboard"
+        href: Dashboard.html
     - text: "Resume"
       menu:
       - text: "Resume"

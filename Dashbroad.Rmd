@@ -1,22 +1,18 @@
 ---
-title: "Ploty"
+title: "Untitled"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+library(flexdashboard)
 library(tidyverse)
 library(viridis)
 library(p8105.datasets)
 library(plotly)
-```
 
-## Data cleaning
-
-```{r}
 set.seed(1551)
 
 data(rest_inspec)
@@ -27,7 +23,10 @@ ri_md =
   sample_n(5000)
 ```
 
-## Barchart on overall Critical flag acrossing the area in NYC
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
 
 ```{r}
 Cri_fla =
@@ -40,10 +39,11 @@ Cri_fla =
  plot_ly(x = ~area, y = ~n, color = ~critical_flag, type = "bar")
 Cri_fla
 ```
-We can see that **Mahattan** have both highest critical and highest, not critical crimes, whereas **Staten island** have both lowest critical and lowest not critical crimes.
 
+Column {data-width=350}
+-----------------------------------------------------------------------
 
-## Boxplot on restarant score across the area
+### Chart B
 
 ```{r}
 sco_bor =
@@ -62,9 +62,7 @@ sco_bor =
 ggplotly(sco_bor)
 ```
 
-We can see that **Brooklyn** has highest median = 16, **Manhattan** has highest number of maximum = 99, **Brooklyn** has highest upper fance = 46. There are lots of outliers(extreme site), in all area.
-
-## Scatterplot on score across Cuisine type
+### Chart C
 
 ```{r}
  sca_cui =
@@ -86,5 +84,3 @@ ri_md %>%
     theme(axis.text.x = element_text(angle = 15, hjust = 1))
 ggplotly(sca_cui)
 ```
-
-from plot we can see that In **Bronx**, the Ice cuisines has highest violate score; In **Brooklyn**, the Salads cuisines have highest violate score;In **Manhattan**, Ice cuisines has highest violate score; In **Queens**, the Juice cuisines has highest violate score; In **Staten island**, the Donuts cuisines has highest violate score;
