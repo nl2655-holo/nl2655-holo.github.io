@@ -5,9 +5,11 @@ navbar:
   left:  
     - text: "About Me"
       href: about.html
+    - text: "Resume"
+      href: material/cv.mht
   right:
-    - text: "Abstrict download(sample)"
-      href: https://drive.google.com/open?id=1pnwPMMxw9ZJSkjVx7aJIcUZJS6KzpEgs
+    - text: "Resume Download"
+      href: https://drive.google.com/open?id=1juFLDX6LDm84P8R5R7K5A5c4ZXLcvXdv
     - icon: fa-envelope fa-lg
       href: mailto:<nl2655@cumc.columbia.edu>
     - icon: fa-weixin fa-lg
