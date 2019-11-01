@@ -84,3 +84,6 @@ ri_md %>%
     theme(axis.text.x = element_text(angle = 15, hjust = 1))
 ggplotly(sca_cui)
 ```
+
+rmarkdown::render("Dashbroad.Rmd", output_format = "flexdashboard::flex_dashboard")
+
