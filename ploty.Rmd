@@ -20,11 +20,13 @@ set.seed(1551)
 data(rest_inspec)
 ri_md = 
   rest_inspec %>% 
-  select(boro, critical_flag, cuisine_description, dba, score) %>% 
-  filter(!is.na(dba),!is.na(score)) %>% 
+  select(boro, critical_flag, cuisine_description, inspection_date, score) %>% 
+  filter(!is.na(score)) %>% 
   sample_n(5000)
 ri_md %>% 
-  count(cuisine_description)
+  group_by(cuisine_description) %>% 
+  summarize(n=sum())
+
 ```
 
 ## Barchart on overall Critical flag acrossing the area in NYC
@@ -62,6 +64,21 @@ sco_bor =
 ggplotly(sco_bor)
 ```
 
-We can see that Brooklyn has highest median = 16, Bronx has highest number of maximum = 100, Staten island has highest upper fance = 48.There are lots of outliers(extreme site), in all area except Staten island.
+We can see that Brooklyn has highest median = 16, Manhattan has highest number of maximum = 99, Brooklyn has highest upper fance = 46.There are lots of outliers(extreme site), in all area.
 
 ## Scatterplot on score across Cuisine type
+
+```{r}
+ sca_cui =
+ri_md %>%
+  filter(cuisine_description == "Donuts"|cuisine_description == "Ice Cream, Gelato, Yogurt, Ices"|cuisine_description == "Juice, Smoothies, Fruit Salads"|cuisine_description == "Salads") %>% 
+  drop_na() %>% 
+  group_by(cuisine_description, boro) %>% 
+  summarize(
+    ave = mean(score) 
+  ) %>% 
+  ggplot(aes(x = cuisine_description , y = ave, color = boro))
+ggplotly(sca_cui)
+sca_cui
+```
+
