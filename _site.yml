@@ -6,7 +6,7 @@ navbar:
     - text: "About Me"
       href: about.html
     - text: "Resume"
-      href: material/cv.mht
+      href: Resume.html
     - text: "Ploty"
       href: ploty.html
   right:
